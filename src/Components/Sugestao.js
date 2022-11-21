@@ -1,65 +1,25 @@
-export default function Sugestao(){
+export default function Sugestao() {
+  const sugestoes = [
+    { imagem: "assets/img/bad.vibes.memes.svg", nome: "bad.vibes.memes", razao: "Segue você" },
+    { imagem: "assets/img/chibirdart.svg", nome: "chibirdart", razao: "Segue você" },
+    { imagem: "assets/img/razoesparaacreditar.svg", nome: "razoesparaacreditar", razao: "Novo no Instagram" },
+    { imagem: "assets/img//adorable_animals.svg", nome: "adorable_animals", razao: "Segue você" },
+    { imagem: "assets/img/smallcutecats.svg", nome: "smallcutecats", razao: "Segue você" }
+  ]
   return (
     <>
-      <div className="sugestao">
+      {sugestoes.map((usuario) => <div className="sugestao">
         <div className="usuario">
-          <img src="assets/img/bad.vibes.memes.svg" />
+          <img src={usuario.imagem} />
           <div className="texto">
-            <div className="nome">bad.vibes.memes</div>
-            <div className="razao">Segue você</div>
+            <div className="nome">{usuario.nome}</div>
+            <div className="razao">{usuario.razao}</div>
           </div>
         </div>
 
         <div className="seguir">Seguir</div>
       </div>
-
-      <div className="sugestao">
-        <div className="usuario">
-          <img src="assets/img/chibirdart.svg" />
-          <div className="texto">
-            <div className="nome">chibirdart</div>
-            <div className="razao">Segue você</div>
-          </div>
-        </div>
-
-        <div className="seguir">Seguir</div>
-      </div>
-
-      <div className="sugestao">
-        <div className="usuario">
-          <img src="assets/img/razoesparaacreditar.svg" />
-          <div className="texto">
-            <div className="nome">razoesparaacreditar</div>
-            <div className="razao">Novo no Instagram</div>
-          </div>
-        </div>
-
-        <div className="seguir">Seguir</div>
-      </div>
-
-      <div className="sugestao">
-        <div className="usuario">
-          <img src="assets/img/adorable_animals.svg" />
-          <div className="texto">
-            <div className="nome">adorable_animals</div>
-            <div className="razao">Segue você</div>
-          </div>
-        </div>
-
-        <div className="seguir">Seguir</div>
-      </div>
-
-      <div className="sugestao">
-        <div className="usuario">
-          <img src="assets/img/smallcutecats.svg" />
-          <div className="texto">
-            <div className="nome">smallcutecats</div>
-            <div className="razao">Segue você</div>
-          </div>
-        </div>
-
-        <div className="seguir">Seguir</div>
-      </div>
+      )}
     </>
   )
 }
