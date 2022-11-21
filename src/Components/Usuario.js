@@ -10,12 +10,12 @@ export default function Usuario() {
       }
     return (
         <div className="usuario">
-        <img  onClick={()=>MudaAvatar()} src={avatar} />
+        <img ata-test="profile-image" onClick={()=>MudaAvatar()} src={avatar} />
         <div className="texto">
           <strong>catanacomics</strong>
-          <span>
+          <span data-test="name">
             {usuario}
-            <ion-icon onClick={()=>MudaNome()} name="pencil"></ion-icon>
+            <ion-icon data-test="edit-name"onClick={()=>MudaNome()} name="pencil"></ion-icon>
           </span>
         </div>
       </div>

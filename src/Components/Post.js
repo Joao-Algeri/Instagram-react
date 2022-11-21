@@ -10,7 +10,7 @@ export default function Post(){
     return(
         <>
         {post.map((item)=>
-            <div className="post">
+            <div data-test="post" className="post">
             <div className="topo">
               <div className="usuario">
                 <img src={item.imagem} />
@@ -22,25 +22,25 @@ export default function Post(){
             </div>
 
             <div className="conteudo">
-              <img src={item.imagemPost} />
+              <img data-test="post-image" src={item.imagemPost} />
             </div>
 
             <div className="fundo">
               <div className="acoes">
                 <div>
-                  <ion-icon name="heart-outline"></ion-icon>
+                  <ion-icon data-test="like-post" name="heart-outline"></ion-icon>
                   <ion-icon name="chatbubble-outline"></ion-icon>
                   <ion-icon name="paper-plane-outline"></ion-icon>
                 </div>
                 <div>
-                  <ion-icon name="bookmark-outline"></ion-icon>
+                  <ion-icon data-test="save-post" name="bookmark-outline"></ion-icon>
                 </div>
               </div>
 
               <div className="curtidas">
                 <img src={item.icone} />
                 <div className="texto">
-                  Curtido por <strong>{item.pessoa}</strong> e <strong>outras {item.numero} pessoas</strong>
+                  Curtido por <strong>{item.pessoa}</strong> e <strong data-test="likes-number">outras {item.numero} pessoas</strong>
                 </div>
               </div>
             </div>
